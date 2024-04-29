@@ -21,6 +21,12 @@ To Implement A* Search algorithm for a Graph using Python 3. &emsp;&emsp;&emsp;&
     - if a node with the same position as successor  is in the CLOSED list which has a lower f than successor, skip this successor otherwise, add  the node to the open list end (for loop)
     - push q on the closed list
     end (while loop)
+
+```
+Developed By: ROHIT JAIN D
+Register No : 212222230120
+```
+
 ### Program:
 ```Python
 from collections import defaultdict
