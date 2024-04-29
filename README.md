@@ -1,26 +1,24 @@
 # EX-04 Implement A* Search Algorithm for a Graph
 ### Aim:
-To Implement A* Search algorithm for a Graph using Python 3.
+To Implement A* Search algorithm for a Graph using Python 3. &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;**DATE: 28.04.2024**
 
 ### Algorithm:
-1. Initialize the open list
-2.  Initialize the closed list
-    put the starting node on the open 
-    list (you can leave its f at zero)
-3.  while the open list is not empty
-    - find the node with the least f on the open list, call it "q"
-    - pop q off the open list
-    - generate q's 8 successors and set their parents to q
-    - for each successor
-      - if successor is the goal, stop search    
-      - else, compute both g and h for successor
-        - successor.g = q.g + distance between successor and q
-        - successor.h = distance from goal to successor (This can be done using many ways, we will discuss three heuristics- Manhattan, Diagonal and Euclidean Heuristics)
-        - successor.f = successor.g + successor.h
-      - if a node with the same position as successor is in the OPEN list which has a lower f than successor, skip this successor
-
-      - if a node with the same position as successor  is in the CLOSED list which has a lower f than successor, skip this successor otherwise, add  the node to the open list end (for loop)
-  
+- Initialize the open list
+- Initialize the closed list
+  - put the starting node on the open
+  - list (you can leave its f at zero)
+- while the open list is not empty
+  - find the node with the least f on the open list, call it "q"
+  - pop q off the open list
+  - generate q's 8 successors and set their parents to q
+  - for each successor
+  - if successor is the goal, stop searcH
+  - else, compute both g and h for successor
+  - successor.g = q.g + distance between successor and q
+  - successor.h = distance from goal to successor (This can be done using many ways, we will discuss three heuristics- Manhattan, Diagonal and Euclidean Heuristics)
+  - successor.f = successor.g + successor.h
+    - if a node with the same position as successor is in the OPEN list which has a lower f than successor, skip this successor
+    - if a node with the same position as successor  is in the CLOSED list which has a lower f than successor, skip this successor otherwise, add  the node to the open list end (for loop)
     - push q on the closed list
     end (while loop)
 ### Program:
@@ -80,18 +78,6 @@ def get_neighbors(v): #define fuction to return neighbor and its distance
         return None
 def heuristic(n):
     return H_dist[n]
-'''Graph_nodes = {                     #Describe your graph here
-    'A': [('B', 6), ('F', 3)],
-    'B': [('A', 6), ('C', 3), ('D', 2)],
-    'C': [('B', 3), ('D', 1), ('E', 5)],
-    'D': [('B', 2), ('C', 1), ('E', 8)],
-    'E': [('C', 5), ('D', 8), ('I', 5), ('J', 5)],
-    'F': [('A', 3), ('G', 1), ('H', 7)],
-    'G': [('F', 1), ('I', 3)],
-    'H': [('F', 7), ('I', 2)],
-    'I': [('E', 5), ('G', 3), ('H', 2), ('J', 3)],
-}
-'''
 graph = defaultdict(list)
 n,e = map(int,input().split())
 for i in range(e):
