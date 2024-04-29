@@ -1,6 +1,6 @@
 # EX-04 Implement A* Search Algorithm for a Graph
 ### Aim:
-To Implement A* Search algorithm for a Graph using Python 3. &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;**DATE: 28.04.2024**
+To Implement A* Search algorithm for a Graph using Python 3. &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;**DATE: 28.02.2024**
 
 ### Algorithm:
 - Initialize the open list
